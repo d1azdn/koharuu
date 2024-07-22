@@ -1,0 +1,42 @@
+[{
+    "landingPage":{
+        "heroImage":"/assets/koharu_mika.jpg",
+        "myWaifu":[
+            {
+                "id":1,
+            "name":"Shimoe Koharu",
+            "school":"Trinity",
+            "image":"https://static.miraheze.org/bluearchivewiki/thumb/c/c3/Koharu.png/266px-Koharu.png",
+            "desc":"Koharu is a member of the Supplemental Lessons Club of Trinity General School. Originally a member of the Justice Actualization Committee, she received failing grades and was in danger of repeating a year, so she was forcefully transferred to the Supplemental Lessons Club. While she may consider herself elite, she is actually rather stupid, so much so in fact that she is completely unable to keep up with her lessons. She has a secret hobby of collecting lewd magazines, and often begins to fantasize about the most trivial things in everyday life, often to her own embarrassment."
+            },
+            {
+                "id":2,
+            "name":"Tanga Ibuki",
+            "school":"Gehenna",
+            "image":"https://static.miraheze.org/bluearchivewiki/thumb/7/75/Ibuki.png/266px-Ibuki.png",
+            "desc":"A student from Gehenna Academy, member of the Pandemonium Society, and a mascot-like girl. She was originally a student of Gehenna Academy's elementary school, but Ibuki's ability was recognized and she joined Gehenna's 'Pandemonium Society', which only the best students can enter. Being the youngest member of the Pandemonium Society, she is loved by everyone for her earnest cuteness. She is a well-behaved girl who works diligently so as not to cause trouble for her seniors."
+            },
+            {
+                "id":3,
+            "name":"Sunohara Kokona",
+            "school":"Shanhaijing",
+            "image":"https://static.miraheze.org/bluearchivewiki/thumb/8/83/Kokona.png/266px-Kokona.png",
+            "desc":"A first-year student of Shanhaijing Senior High School, Kokona works as an instructor in the 'Meihua Yuan' disciplinary support department. Although young enough to still be attending elementary school, she has been recognized for her excellent learning ability and has been given the authority of an instructor. The students affectionately call her 'Kokona-chan', but Kokona isn't very happy about that."
+            },
+            {
+                "id":4,
+            "name":"Ajitani Hifumi",
+            "school":"Trinity",
+            "image":"https://static.miraheze.org/bluearchivewiki/thumb/3/3b/Hifumi.png/266px-Hifumi.png",
+            "desc":"A sensitive girl, Hifumi is a student of Trinity Integrated Academy and a member of the Supplementary Classes Club. Despite her average grades and appearance, Hifumi's gentle and kind personality has gained her popularity. While she will gladly lend an ear to those with problems, she has a tendency to be swept up in the moment and unintentionally cause trouble."
+            },
+            {
+                "id":5,
+            "name":"Kirifuji Nagisa",
+            "school":"Trinity",
+            "image":"https://static.miraheze.org/bluearchivewiki/6/6a/Nagisa.png",
+            "desc":"Affiliated with Trinity General Academy, she is the leader of 'Filius', one of the student union bodies that make up Trinity, and the host of the 'Tea Party' student council. Nagisa is refined and soft-spoken, but rarely reveals her true feelings, making her a complicated and mysterious character. Her hobby is preparing tea leaves and sweets for tea parties. She dreams of a day when many Trinity students would be invited to a tea party of hers."
+            }
+        ]
+    }
+}]
