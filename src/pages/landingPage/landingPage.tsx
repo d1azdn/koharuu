@@ -2,7 +2,6 @@ import { useState } from "react"
 import React from "react";
 import axios from "axios";
 
-import { loadStudentInfo } from "../../initialDataLoad";
 import { loadInitialData, loadStaticData } from "./landingMethod";
 
 export default function LandingPage(props:any){
@@ -113,7 +112,7 @@ export default function LandingPage(props:any){
                 {
                     image?.map(
                         (e)=>{
-                            if(e.rating === "s"){
+                            if(e.rating == "g" || e.rating == "s"){
                             return(
                                 <a href={e.large_file_url} target="_blank" key={e.id}><img src={e.large_file_url} alt={e.id} className="border-2 border-rose-300 rounded-md h-80 w-full object-cover hover:shadow-rose-300 shadow-sm hover:scale-110 hover:cursor-pointer duration-200"/>
                                 </a>
@@ -126,7 +125,8 @@ export default function LandingPage(props:any){
 
                 <div className="toCategories mt-12 text-center">
                     <h4 className="text-xl">
-                        <b>Want to know more about your student ?</b>
+                        <b>Want to know more about your student, {
+                            oneStudent} ?</b>
                     </h4>
                     <a onClick={()=>{props.handlePage('customize')}} className="hover:cursor-pointer"><p className="bg-rose-300 p-2 mt-2 rounded-md hover:bg-rose-200 duration-200">Go here.</p></a>
                 </div>

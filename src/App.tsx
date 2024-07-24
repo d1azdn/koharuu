@@ -4,8 +4,8 @@ import React from 'react';
 import './App.css'
 
 import LandingPage from './pages/landingPage/landingPage'
-import CustomizePage from './pages/customizePage'
-import CreditPage from './pages/creditPage'
+import CustomizePage from './pages/customizePage/customizePage'
+import CreditPage from './pages/creditPage/creditPage'
 
 import UserNavbar from './component/navbar'
 import UserFooter from './component/footer'

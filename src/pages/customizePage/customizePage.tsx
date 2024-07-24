@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react"
-
+import { loadStudentInfo } from "../../initialDataLoad"
 
 export default function CustomizePage(){
     const [studentName, setStudentName] = useState('')
@@ -10,17 +10,24 @@ export default function CustomizePage(){
 
     React.useEffect(()=>{
         setStudentName(sessionStorage.getItem('oneStudent') as string)
-        setStudentSchoolmate(JSON.parse(sessionStorage.getItem('oneStudentSchoolmate') as string))
     },[])
-
-    async function getStudentInfo(props:string){
-        const takeStudentData = await fetch("https://api.ennead.cc/buruaka/character/"+props)
-        const studentDataJSON = await takeStudentData.json()
-        setStudentInfo([studentDataJSON])
-    }
+    
     React.useEffect(()=>{
-        if (studentName != '') {
-            getStudentInfo(studentName)
+        const prevStudentName = JSON.parse(sessionStorage.getItem('oneStudentInfo') as string)
+
+        if (studentName == '') return
+
+        if (studentName == prevStudentName[0].character.name.toLowerCase()){
+            setStudentSchoolmate(JSON.parse(sessionStorage.getItem('oneStudentSchoolmate') as any))
+            setStudentInfo(JSON.parse(sessionStorage.getItem('oneStudentInfo') as string))
+        } else {
+            const loadAllData = async () => {
+                const staticRes:any = await loadStudentInfo(studentName)
+                console.log(staticRes)
+                setStudentSchoolmate(JSON.parse(sessionStorage.getItem('oneStudentSchoolmate') as any))
+                setStudentInfo(JSON.parse(sessionStorage.getItem('oneStudentInfo') as string))
+            }
+            loadAllData()
         }
     }, [studentName])
 
@@ -36,19 +43,6 @@ export default function CustomizePage(){
     },[studentInfo])
 
 
-    async function getStudentSchoolmate(props:string){
-        const takeStudentSchoolData = await fetch("https://api.ennead.cc/buruaka/character/query?school="+props)
-        const studentSchoolDataJSON = await takeStudentSchoolData.json()
-        setStudentSchoolmate(studentSchoolDataJSON)
-    }
-    React.useEffect(()=>{
-        if (studentSchool != ''){
-            getStudentSchoolmate(studentSchool as string)
-        }
-    },[studentSchool])
-
-
-
     return(
         <div className="customize">
 
@@ -57,7 +51,7 @@ export default function CustomizePage(){
                 studentInfo?.map(
                     e=>{
                         return(
-                            <div key={e.id} className="justify-center flex flex-row gap-10 border-2 border-rose-300 py-6 px-14 rounded-lg">
+                            <div key={e.id} className="justify-center flex flex-row gap-10 border border-rose-300 shadow-md shadow-rose-300 py-6 px-14 rounded-lg">
 
                             <div className="images w-1/3">
                                 <img src={e.image.icon} alt="..." className="w-full h-96 object-cover"/>
@@ -70,9 +64,9 @@ export default function CustomizePage(){
                                 <hr className="m-6"/>
                                 <p>{e.character.profile}</p>
                                 <div className="role grid-cols-3 grid border-2 rounded-xl p-4 me-6 gap-5 border-rose-300 mt-8 place-items-center text-center">
-                                    <p>{e.character.baseStar} Stars {e.character.rarity}</p>
-                                    <p>{e.character.armorType} (Armor)</p>
-                                    <p>{e.character.bulletType} (Damage)</p>
+                                    <p><b>{e.character.baseStar} Stars {e.character.rarity}</b></p>
+                                    <p><b>{e.character.armorType} (Armor)</b></p>
+                                    <p><b>{e.character.bulletType} (Damage)</b></p>
                                     <p>{e.character.position} (Position)</p>
                                     <p>{e.character.role} (Role)</p>
                                     <p>{e.character.squadType} (Squad)</p>
@@ -90,11 +84,11 @@ export default function CustomizePage(){
 
             <section className="student mx-32 mt-20 mb-8">
                 <h4 className="text-2xl font-semibold">Student with same school : {studentSchool}</h4>
-                <div className="studentList grid grid-cols-2 gap-4 mt-6">
+                <div className="studentList grid grid-cols-3 gap-4 mt-6">
                     {
                         studentSchoolmate?.map(
                             e=>{return(
-                                <button key={e.name} className="border p-4">{e.name}</button>
+                                <a href="#" key={e.name} className="border p-4 text-center hover:border-rose-300 hover:scale-105 hover:shadow-rose-300 shadow-md shadow-neutral-200 rounded-xl duration-200" onClick={()=>setStudentName(e.name)}>{e.name}</a>
                             )}
                         )
                     }
