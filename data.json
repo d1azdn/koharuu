@@ -1,6 +1,6 @@
 [{
     "landingPage":{
-        "heroImage":"assets/koharu_mika.jpg",
+        "heroImage":"./assets/koharu_mika.jpg",
         "myWaifu":[
             {
                 "id":1,
