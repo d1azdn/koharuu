@@ -1,143 +1,86 @@
-<!--
-!!! IMPORTANT !!!
-This README is an example of how you could professionally present your codebase. 
-Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
-
-You should modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
-
-For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
--->
-
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <img src="./public/assets/koharu.jpg" alt="logo" width="140"  height="auto" />
   <h3><b>Koharuu</b></h3>
-
 </div>
 
 # 📗 Table of Contents
 - [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
+  - [⚙️ Production (done)](#production)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
+  - [Installation](#installation)
   - [Usage](#usage)
 - [🤝 Contributing](#contributing)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 <br>
 
 
+
+
 # 📖 Koharuu <a name="about-project"></a>
+**Koharuu** is a project that implements a REST API using ReactJS to create a website for exploring anime content especialy Blue Archive Anime. The website allows users to interact with real-time data, fetching anime details such as titles, descriptions, and images from an external API. 
 
-**Koharuu** is a simple web apps designed for searching waifu from anime Blue archive. It provides image search and also more information about student such as Damage, Role and Rarity.
 
-## 🛠 Built With <a name="built-with"></a>
+## ⚙️ Production (done)<a name="production"></a>
+This project progressed over the **course of two week** before its public release, following several key stages: creating a UI/UX prototype, developing the base HTML in VSCode, converting it into the required programming language, and finally pushing the completed code to GitHub.
 
 ### Tech Stack <a name="tech-stack"></a>
-
-Using reactjs.
-
-<!-- Features -->
-
+- Basic web develompent, such as HTML, CSS, Javascript.
+- React.js for front-end use.
+- Tailwindcss as CSS Framework.
 ### Key Features <a name="key-features"></a>
-
 - **Navigation**: Navigation system that adjusts based on user's interactions.
-- **Simple Design**: Only uses standard HTML and CSS for styling, keeping the design simple and easy to understand.
-
+- **Minimalist Design**: Utilizes basic HTML and TailwindCSS for a clean and intuitive design.
+- **Search Functionality**: Provides a search bar that allows users to quickly find anime content.
+- **Data Fetching**: Fetches and displays real-time data from external APIs.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+
+
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Click here!](https://diazdn-source.online/koharuu/)
-
+This project is hosted using **GitHub Pages**, a platform that allows for seamless deployment and hosting of static websites directly from a GitHub repository. You can explore the live version of the website by visiting the following link.
+### [Link to website >](https://diazdn-source.online/koharuu/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
+
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
-1. Clone this website at your directory.
+- Clone this website at your directory.
 ```sh
 git clone https://github.com/d1azdn/koharuu
 ```
 
 ### Install
-2. Install the package.
+- Install the package.
 ```sh
 npm install
 ```
 
 ### Usage
-To run the project, execute the following command:
-
+- To run the project, execute the following command:
 ```sh
 npm run dev
 ```
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+## 🤝 Contributing <a name="contributing"></a>
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues/).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank...
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-<!-- FAQ (optional) -->
-
-<!-- ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
-
 This project is [MIT](./LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
